@@ -1,0 +1,22 @@
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = [
+    "-v",
+    "--cov=data_persistence",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "--cov-fail-under=80",
+]
+
+[tool.coverage.run]
+source = ["data_persistence"]
+omit = [
+    "data_persistence/main.py",
+    "data_persistence/__init__.py",
+    "data_persistence/*/__init__.py",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true

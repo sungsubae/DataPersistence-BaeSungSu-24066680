@@ -40,5 +40,9 @@ desktop.ini
 .coverage
 htmlcov/
 
+# 런타임 데이터 (main.py 실행 결과)
+data/*.json
+data/*.tmp
+
 # 로그
 *.log
